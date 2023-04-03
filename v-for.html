@@ -11,6 +11,12 @@
             <button @click="addItem">Add Item</button>
 
 			<li v-for="(item, index) in items" :key="index">{{ item }}</li>
+			<!-- ディレクティブ...Vue.jsが提供する命令をHTMLの属性として表現するもの
+				HTMLのような静的なプログラムの中に動的なプログラムを作成する
+				 v-for ディレクティブの構文は、v-for="(item, index) in items" のように、
+				 (要素, インデックス) in 配列 という形式で書かれます。
+				 :key 属性は、各リストアイテムの一意の識別子を提供します。
+			-->
 		</ul>
 
 	</div>
