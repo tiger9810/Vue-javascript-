@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue.js Directives Sample</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="v-for">
+		<h2>v-for Directiveの動作確認</h2>
+		<ul>
+            <button @click="addItem">Add Item</button>
+
+			<li v-for="(item, index) in items" :key="index">{{ item }}</li>
+		</ul>
+
+	</div>
+	</div>
+
+	
+	<script>
+		new Vue({
+			el: '#v-for', //id="v-for"であるHTML要素を指します。
+			data: {
+				isShown: true,
+				items: [],
+				count: 0,
+				isShown2: true
+			},
+			methods: {
+				addItem() {
+                    this.count++;
+					this.items.push(`New Item(${this.count})`);
+				},
+			}
+		});
+	</script>
+</body>
+</html>
