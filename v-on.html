@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vue.js v-on Sample</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="showMessage">Click me</button>
+        <p>{{ message }}</p>
+      </div>
+      
+      <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: '',
+            },
+            methods: {
+                showMessage() {
+                    //👆showMessage: function()の省略記法
+                    if (this.message === '') {
+                this.message = 'Hello World!';
+                }  else if (this.message === 'Hello World!'){
+                this.message = 'Hello World again !'
+                } else {
+                this.message = 'Hello World!'
+                }
+                }
+            }
+        });
+
+      </script>
+</body>
+</html>
